@@ -32,10 +32,7 @@
                             <i class="fas fa-trash"></i></a>
                     </center>
                 </td>
-
             </tr>
         <?php endforeach; ?>
-
     </table>
-
 </div>

@@ -1,6 +1,7 @@
 <!-- Video ke - 4 -->
 <?php 
-    class DataJabatan extends CI_Controller{
+    class DataJabatan extends CI_Controller
+    {
         public function index()
         {
             $data['title'] = "Data Jabatan";
@@ -21,8 +22,8 @@
         public function tambahDataAksi()
         {
             $this->_rules();
-
-            if($this->form_validation->run() == FALSE) {
+            
+            if ($this->form_validation->run() == FALSE) {
                 $this->tambahData();
             }else{
                 $nama_jabatan   = $this->input->post('nama_jabatan');
@@ -45,12 +46,11 @@
                 redirect('admin/dataJabatan');
             }            
         }
-
         public function _rules(){
             $this->form_validation->set_rules('nama_jabatan','nama jabatan','required');
             $this->form_validation->set_rules('gaji_pokok','gaji pokok','required');
-            $this->form_validation->set_rules('tj_transport','tj_transport','required');
-            $this->form_validation->set_rules('uang_makan','uang_makan','required');
+            $this->form_validation->set_rules('tj_transport','tj transport','required');
+            $this->form_validation->set_rules('uang_makan','uang makan','required');
         }
         public function updateData($id)
         {
@@ -86,7 +86,7 @@
                     'id_jabatan' => $id
                 );
 
-                $this->penggajianModel->update_data('data_jabatan',$data,$where);
+                $this->penggajianModel->update_data('data_jabatan', $data, $where);
                 $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>Data Berhasil Diupdate!</strong>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
