@@ -39,6 +39,7 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?php echo base_url('admin/dataAbsensi') ?>">Data Absensi</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/potonganGaji') ?>">Setting Potongan Gaji</a>
                         <a class="collapse-item" href="<?php echo base_url('admin/dataPenggajian') ?>">Data Gaji</a>
                     </div>
                 </div>

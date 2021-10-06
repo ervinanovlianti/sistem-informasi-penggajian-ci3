@@ -93,7 +93,7 @@
             <?php endforeach; ?>
 
     </table>
-<?php }else { ?>
+    <?php }else { ?>
     <span class="badge badge-danger"><i class="fas fa-info-circle"></i>
         Data masih kosong, silahkan input data kehadiran pada bulan dan tahun yang Anda pilih.
     </span>
