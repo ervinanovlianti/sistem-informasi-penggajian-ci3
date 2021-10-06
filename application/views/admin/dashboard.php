@@ -15,7 +15,10 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Data Pegawai</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $pegawai ?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                
+                                                <?php echo $pegawai ?>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-users fa-2x text-gray-300"></i>
@@ -32,7 +35,10 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Data Admin</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $admin ?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                
+                                                <?php echo $admin ?>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user-cog fa-2x text-gray-300"></i>
@@ -51,7 +57,10 @@
                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Data Jabatan</div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo $jabatan ?></div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                           
+                                                    <?php echo $jabatan ?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -70,7 +79,10 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Data Kehadiran</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $kehadiran ?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                
+                                                <?php echo $kehadiran ?>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
