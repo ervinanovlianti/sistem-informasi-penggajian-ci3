@@ -25,7 +25,7 @@
             <td><?php echo $p->jabatan ?></td>
             <td><?php echo $p->tanggal_masuk ?></td>
             <td><?php echo $p->status ?></td>
-            <td><img src="<?php echo base_url().'assets/photo'.$p->photo ?>" width="75px"></td>
+            <td><img src="<?php echo base_url('assets/photo/'.$p->photo)?>" width="75px"></td>
             <td>
                 <center>
                     <a class="btn btn-sm btn-primary" 

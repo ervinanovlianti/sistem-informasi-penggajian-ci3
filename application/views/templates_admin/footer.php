@@ -3,7 +3,7 @@
             <footer class="sticky-footer bg-white fixed-bottom">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PT. Indonesia Bangkit 2021</span>
+                        <span>Copyright &copy; BY. ERVINA NOVLIANTI 2021</span>
                     </div>
                 </div>
             </footer>

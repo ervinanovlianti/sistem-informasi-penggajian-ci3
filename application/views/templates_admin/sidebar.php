@@ -103,7 +103,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <h4 class="font-weight-bold">PT. INDONESIA BANGKIT</h4>
+                    <h4 class="font-weight-bold">BY. ERVINA NOVLIANTI</h4>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                             

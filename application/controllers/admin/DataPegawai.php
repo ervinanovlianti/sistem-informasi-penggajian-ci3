@@ -38,7 +38,9 @@
                 }else {
                     $config ['upload_path']      = './assets/photo';
                     $config ['allowed_types']    = 'jpg|jpeg|png|tiff';
+
                     $this->load->library('upload', $config);
+                    
                     if (!$this->upload->do_upload('photo')) {
                         echo "Photo Gagal Diupload!";
                     }else {
@@ -143,7 +145,7 @@
                 $this->form_validation->set_rules('tanggal_masuk','Tanggal Masuk','required');
                 $this->form_validation->set_rules('jabatan','Jabatan','required');
                 $this->form_validation->set_rules('status','Status','required');
-                $this->form_validation->set_rules('photo','photo','required');
+                # $this->form_validation->set_rules('photo','photo','required');
             }
     }
 
