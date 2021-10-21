@@ -68,7 +68,7 @@
             
     ?>
 
-    <table class="table table-border table-striped">
+    <table class="table table-border table-striped mt-2" style="margin-bottom: 100px;">
         <tr>
             <td class="text-center">No.</td>
             <td class="text-center">NIK</td>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <title><?php echo $title ?></title>
     <style type="text/css">
         body{
@@ -26,22 +25,21 @@
                 $tahun = date('Y');
                 $bulantahun = $bulan.$tahun;
             }
+        
     ?>
-    <!-- <table>
+    <table>
         <tr>
             <td>Bulan</td>
             <td>:</td>
-            <td><?php echo $bulan ?></td>
-        </tr>
+            <td><?php echo $bulan  ?></td>
+         </tr>
         <tr>
             <td>Tahun</td>
             <td>:</td>
-            <td><?php echo $tahun ?></td>
-        </tr>
-    </table> -->
-    <div class="alert alert-dark"> Bulan: <span class="font-weight-bold"><?php echo $bulan ?>,</span> 
-            Tahun: <span class="font-weight-bold"><?php echo $tahun ?></span>
-    </div>
+            <td><?php echo $tahun  ?></td>
+         </tr>
+    </table>
+    
     <table class="table table-bordered table-striped">
                 <tr>
                     <th class="text-center">No.</th>

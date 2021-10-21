@@ -1,10 +1,10 @@
-<div class="container-fluid">
+<div class="container-fluid" style="margin-bottom: 100px;">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><?php echo $title ?></h1>
     </div>
     <a class="mb-2 mt-2 btn btn-sm btn-success" href="<?php echo base_url('admin/dataPegawai/tambahData') ?>"><i class="fas fa-plus"></i> Tambah Pegawai</a>
     <?php echo $this->session->flashdata('pesan') ?>
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered mt-2" style="margin-bottom: 100px;">
         <tr>
             <th class="text-center">No</th>
             <th class="text-center">NIK</th>
@@ -14,6 +14,7 @@
             <th class="text-center">Tanggal Masuk</th>
             <th class="text-center">Status</th>
             <th class="text-center">Photo</th>
+            <th class="text-center">Hak Akses</th>
             <th class="text-center">Action</th>
         </tr>
         <?php $no=1; foreach($pegawai as $p) : ?>
@@ -26,6 +27,11 @@
             <td><?php echo $p->tanggal_masuk ?></td>
             <td><?php echo $p->status ?></td>
             <td><img src="<?php echo base_url('assets/photo/'.$p->photo)?>" width="75px"></td>
+                <?php if($p->hak_akses=='1') { ?>
+                    <td>Admin</td>
+                <?php }else{ ?>
+                    <td>Pegawai</td>
+                <?php } ?>
             <td>
                 <center>
                     <a class="btn btn-sm btn-primary" 

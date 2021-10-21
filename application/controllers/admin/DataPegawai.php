@@ -1,6 +1,18 @@
 <?php 
     class DataPegawai extends CI_Controller
     {
+        public function  __construct()
+        {
+            parent::__construct();
+            if ($this->session->userdata('hak_akses') != '1') {
+                $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Anda belum login!</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                </div>');
+				redirect('welcome');
+            }
+        }
         public function index()
         {
             $data['title'] = "Data Pegawai";
@@ -32,13 +44,17 @@
                 $tanggal_masuk  = $this->input->post('tanggal_masuk');
                 $jabatan        = $this->input->post('jabatan');
                 $status         = $this->input->post('status');
+                $hak_akses      = $this->input->post('hak_akses');
+                $username       = $this->input->post('username');
+                $password       = md5($this->input->post('password'));
                 $photo          = $_FILES['photo']['name'];
                 if ($photo=''){
 
                 }else {
-                    $config ['upload_path']      = './assets/photo';
-                    $config ['allowed_types']    = 'jpg|jpeg|png|tiff';
-
+                    
+                    $config ['upload_path']         = './assets/photo';
+                    $config ['allowed_types']       = 'jpg|jpeg|png|tiff';
+                    $config ['file_name']           = 'nama_pegawai';
                     $this->load->library('upload', $config);
                     
                     if (!$this->upload->do_upload('photo')) {
@@ -54,6 +70,9 @@
                 'jabatan'           => $jabatan,
                 'tanggal_masuk'     => $tanggal_masuk,
                 'status'            => $status,
+                'hak_akses'         => $hak_akses,
+                'username'          => $username,
+                'password'          => $password,
                 'photo'             => $photo,
             );
             
@@ -91,8 +110,12 @@
                     $tanggal_masuk  = $this->input->post('tanggal_masuk');
                     $jabatan        = $this->input->post('jabatan');
                     $status         = $this->input->post('status');
+                    $hak_akses      = $this->input->post('hak_akses');
+                    $username       = $this->input->post('username');
+                    $password       = md5($this->input->post('password'));
                     $photo          = $_FILES['photo']['name'];
                     if ($photo){
+                        $config ['encrypt_name']      = TRUE;
                         $config ['upload_path']      = './assets/photo';
                         $config ['allowed_types']    = 'jpg|jpeg|png|tiff';
                         $this->load->library('upload', $config);
@@ -110,6 +133,9 @@
                     'jabatan'           => $jabatan,
                     'tanggal_masuk'     => $tanggal_masuk,
                     'status'            => $status,
+                    'hak_akses'         => $status,
+                    'username'          => $username,
+                    'password'          => $password,
                 );
 
                 $where = array(

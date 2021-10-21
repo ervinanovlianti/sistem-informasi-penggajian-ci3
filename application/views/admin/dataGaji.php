@@ -10,7 +10,7 @@
         <div class="card-body">
             <form class="form-inline">
                 <div class="form-group mb-2">
-                    <label for="staticEmail2">Bulan :</label>
+                    <label>Bulan :</label>
                     <select class="form-control ml-3" name="bulan">
                         <option value="">--Pilih Bulan--</option>
                         <option value="01">Januari</option>
@@ -84,7 +84,7 @@
             
          ?>
         <div class="table-responsive">
-            <table class="table table-bordered table-striped">
+            <table class="table table-bordered table-striped mt-2" style="margin-bottom: 100px;">
                 <tr>
                     <th class="text-center">No.</th>
                     <th class="text-center">NIK</th>
